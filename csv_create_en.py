@@ -3,21 +3,8 @@ python csv_create.py src_csv dist_csv
 """
 import csv
 import sys
+from extraction_info import extraction_info
 
-def extraction_info(x,item,index):
-    if x.find(item) != -1:
-        y1 = x[x.find(item):]
-        y2 = y1.split()
-        y3 = y2[index] 
-        if y3[:1] == "[":
-            y4 = y3[1:]
-            y5 = y4[:-1]
-            list_info = y5
-        else:
-            list_info = y3
-    else:
-        list_info = 0
-    return list_info
 
 def shape_row(x):
     itemlist = []
